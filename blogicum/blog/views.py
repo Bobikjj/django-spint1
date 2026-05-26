@@ -1,6 +1,5 @@
 from django.shortcuts import render, get_object_or_404
 
-# Ваш список постов (исправленный)
 posts = [
     {
         'id': 0,
