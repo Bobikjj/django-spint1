@@ -67,9 +67,5 @@ def post_detail(request, pk):
 
 def category_posts(request, category_slug):
     """Страница с постами определенной категории."""
-    filtered_posts = [post for post in posts if post['category'] == category_slug]
-    context = {
-        'category_slug': category_slug,
-        'posts': filtered_posts,
-    }
+    context = {'category_slug': category_slug}
     return render(request, 'blog/category.html', context)
