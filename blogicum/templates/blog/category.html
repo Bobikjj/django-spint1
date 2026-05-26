@@ -1,11 +1,11 @@
 {% extends "base.html" %}
 
 {% block title %}
-  Публикации в категории {{ category }}
+  Публикации в категории {{ category_slug }}
 {% endblock %}
 
 {% block content %}
-  <h1>Публикации в категории {{ category }}</h1>
+  <h1>Публикации в категории {{ category_slug }}</h1>
   {% for post in posts %}
     <hr>
     {% include "includes/post_card.html" with post=post truncate=10 show_link=True %}
